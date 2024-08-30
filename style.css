@@ -64,7 +64,7 @@ ul.menu {
 .menu li {
     flex: 1;
     list-style-type: none;
-    font-size: 16px;
+    font-size: 20px;
     font-family: "Barlow Condensed";
     text-align: center;
 }
@@ -666,6 +666,7 @@ ul.menu {
 }
 
 /* Basic styling for the modal */
+/* Modal Container */
 .modal {
     display: block;
     position: fixed;
@@ -677,37 +678,40 @@ ul.menu {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Modal Content */
 .modal-content {
-    position: relative;
     background-color: #fff;
-    margin: auto;
+    margin: 10% auto; /* Center the modal */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 400px;
-    top: 50%;
-    transform: translateY(-50%);
+    max-width: 400px; /* Limit the width of the modal */
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
     text-align: center;
-}
+  }
 
-
+  .modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
 
 /* Close button styles */
 .close-btn {
     position: absolute;
     top: 10px;
     right: 15px;
-    color: #aaa;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
+    color: red; /* Red color for the close button */
     cursor: pointer;
-}
+    transition: color 0.3s ease;
+  }
 
-.close-btn:hover,
-.close-btn:focus {
-    color: black;
-    text-decoration: none;
-}
+  .close-btn:hover {
+    color: darkred; /* Darker red on hover */
+  }
 
 
 .site-content {
@@ -736,3 +740,155 @@ button:hover {
     background-color: #0056b3;
 }
 
+.about {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .about-img-card {
+    flex: 1;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .image-row img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .image-row img:last-child {
+    margin-bottom: 0;
+  }
+  
+  .about-text {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .about-text small {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff7f50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .about-text p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .about-text label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .about-text a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .about-text a:hover {
+    background-color: #ff5733;
+  }
+  
+  /* Submit Button */
+#mobileForm button {
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  #mobileForm button:hover {
+    background-color: #ff5733;
+  }
+
+  /* Contact Us Section */
+.contact-us {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+  }
+  
+  .contact-icons a {
+    color: #333;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .contact-icons a:hover {
+    color: #ff7f50; /* Change color on hover */
+  }
+  
+  /* FontAwesome icons should be included */
+  
+  /* Style for the feature labels */
+.feature {
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Vertically centers the items */
+    font-size: 1rem; /* Adjust text size */
+    margin-bottom: 10px; /* Space between items */
+  }
+  
+  /* Style for the tick icon */
+  .tick {
+    color: #28a745; /* Green color for the tick */
+    font-size: 1.2rem; /* Size of the tick */
+    margin-right: 10px; /* Space between the tick and text */
+  }
+  

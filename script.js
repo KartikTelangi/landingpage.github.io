@@ -8,6 +8,14 @@ function closeModal() {
     document.getElementById('mobileModal').style.display = 'none';
 }
 
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById("mobileModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
 // Event listener for form submission
 document.getElementById('mobileForm').addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent the default form submission

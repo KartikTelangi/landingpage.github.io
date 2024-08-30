@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 <head>
   <meta charset="UTF-8" />
@@ -14,16 +16,17 @@
   <body>
     <!-- Modal for mobile number input -->
   
-<div class="modal" id="mobileModal">
-  <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span> <!-- Close button -->
-      <h2>Please Enter Your Mobile Number</h2>
-      <form id="mobileForm">
+    <div class="modal" id="mobileModal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span> <!-- Close button -->
+        <h2>Please Enter Your Mobile Number</h2>
+        <form id="mobileForm">
           <input type="tel" id="mobileNumber" placeholder="Enter mobile number" required pattern="[0-9]{10}" />
           <button type="submit">Submit</button>
-      </form>
-  </div>
-</div>
+        </form>
+      </div>
+    </div>
+    
 
 
     <!--===========Nav Bar=================-->
@@ -34,8 +37,8 @@
         <li><a href="#">tours</a></li>
         <!-- <li><a href="#">package</a></li> -->
         <!-- <li><a href="#">blog</a></li> -->
-        <li><a href="#">about us</a></li>
-        <li><a href="#">contact us</a></li>
+        <li><a href="#about-us">about us</a></li>
+        <li><a href="#contact-us">contact us</a></li>
       </ul>
       </div>
 
@@ -156,30 +159,62 @@
       </div>
     </section>
     <!--===========About Us===============-->
-<section class="about">
-  <div class="about-img">
-    <img src="banner.png" alt="Sonai Tours and Travel">
-  </div>
-  <div class="about-text">
-    <small style="font-size: 1.2rem; font-weight: bold; color: #ff7f50; text-transform: uppercase; letter-spacing: 2px;">
-      About Sonai Tours and Travel
-    </small>
+    <section class="about" id="about-us">
+      <div class="about-content">
+        <div class="about-img-card">
+          <div class="image-row">
+            <img src="https://www.shutterstock.com/image-photo/young-beautiful-woman-traveling-by-600nw-2253552781.jpg" alt="Sonai Tours and Travel - Image 1">
+            <img src="https://i.pinimg.com/736x/ce/75/ce/ce75ce616c2c92d8b4b5ac8ccbea656d.jpg" alt="Sonai Tours and Travel - Image 2">
+            <img src="https://img.freepik.com/premium-photo/group-friends-travel-enjoy-nature_211251-1290.jpg" alt="Sonai Tours and Travel - Image 3">
+          </div>
+        </div>
+        
+        <div class="about-text">
+          <small>About Sonai Tours and Travel</small>
+          <h2>Your Trusted Travel Partner for Over 40 Years</h2>
+          <p>
+            At Sonai Tours and Travel, we pride ourselves on delivering exceptional travel experiences. 
+            With 40 years of expertise, we offer a wide range of services, including local trips, office trips, tour trips, and outstation trips. 
+            Whether you’re looking for a peaceful getaway or a well-organized corporate trip, we ensure your journey is comfortable, enjoyable, and memorable.
+          </p>
+          <label class="feature">
+            <span class="tick">&#10003;</span> Expertly curated local and outstation trips
+          </label>
+          <label class="feature">
+            <span class="tick">&#10003;</span> Dedicated corporate travel solutions
+          </label>
+          <label class="feature">
+            <span class="tick">&#10003;</span> Customized tours tailored to your needs
+          </label>
+          <label class="feature">
+            <span class="tick">&#10003;</span> 40 years of trusted travel experience
+          </label>
+          
+          <a href="#">LEARN MORE ABOUT US</a>
+        </div>
+      </div>
+    </section>
     
-    <h2>Your Trusted Travel Partner for Over 40 Years</h2>
-    <p>
-      At Sonai Tours and Travel, we pride ourselves on delivering exceptional travel experiences. 
-      With 40 years of expertise, we offer a wide range of services, including local trips, office trips, tour trips, and outstation trips. 
-      Whether you’re looking for a peaceful getaway or a well-organized corporate trip, we ensure your journey is comfortable, enjoyable, and memorable.
-    </p>
+    <!--===========contactus=================-->
 
-    <label><input type="checkbox" checked>Expertly curated local and outstation trips</label>
-    <label><input type="checkbox" checked>Dedicated corporate travel solutions</label>
-    <label><input type="checkbox" checked>Customized tours tailored to your needs</label>
-    <label><input type="checkbox" checked>40 years of trusted travel experience</label>
-    <a href="#">LEARN MORE ABOUT US</a>
-  </div>
-</section>
-
+    <section class="contact-us" id="contact-us">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us through any of the following channels:</p>
+        <div class="contact-icons">
+          <a href="https://wa.me/yourwhatsappnumber" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:your-email@example.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.instagram.com/yourinstagram" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    
 
     <!--===========Footer=================-->
     <div class="footer">
