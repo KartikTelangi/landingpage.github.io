@@ -1,5 +1,26 @@
+// Function to open the modal
+function openModal() {
+    document.getElementById('mobileModal').style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById('mobileModal').style.display = 'none';
+}
+
+// Event listener for form submission
+document.getElementById('mobileForm').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the default form submission
+
+    const mobileNumber = document.getElementById('mobileNumber').value;
+    await sendDataToZapier(mobileNumber);
+});
+
 // Function to send data to Zapier
-async function sendDataToZapier(mobileNumber, destination, date) {
+async function sendDataToZapier(mobileNumber) {
+    const destination = document.querySelector('[name="destination"]').value;
+    const date = document.querySelector('[name="date"]').value;
+
     const formData = {
         mobileNumber,
         destination,
@@ -7,7 +28,6 @@ async function sendDataToZapier(mobileNumber, destination, date) {
     };
 
     try {
-        // Send data to Zapier webhook with Content-Type: application/x-www-form-urlencoded
         const response = await fetch('https://hooks.zapier.com/hooks/catch/19961036/2td9oqx/', {
             method: 'POST',
             headers: {
@@ -18,7 +38,7 @@ async function sendDataToZapier(mobileNumber, destination, date) {
 
         if (response.ok) {
             alert('Your data has been submitted successfully!');
-            document.getElementById('mobileModal').style.display = 'none';
+            closeModal(); // Close the modal on successful submission
         } else {
             const errorResponse = await response.json();
             console.error('Error submitting data:', errorResponse);
@@ -29,6 +49,7 @@ async function sendDataToZapier(mobileNumber, destination, date) {
         alert('An error occurred: ' + error.message);
     }
 }
+
 
 // Event listener for the mobile number form submission
 document.getElementById('mobileForm').addEventListener('submit', async (event) => {

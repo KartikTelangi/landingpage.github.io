@@ -13,16 +13,18 @@
 
   <body>
     <!-- Modal for mobile number input -->
-    <div class="modal" id="mobileModal" >
-      <div class="modal-content">
-        <h2>Please Enter Your Mobile Number</h2>
-        <form id="mobileForm">
+  
+<div class="modal" id="mobileModal">
+  <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span> <!-- Close button -->
+      <h2>Please Enter Your Mobile Number</h2>
+      <form id="mobileForm">
           <input type="tel" id="mobileNumber" placeholder="Enter mobile number" required pattern="[0-9]{10}" />
           <button type="submit">Submit</button>
-        </form>
-        
-      </div>
-    </div>
+      </form>
+  </div>
+</div>
+
 
     <!--===========Nav Bar=================-->
     <section class="nav-bar">
@@ -39,26 +41,28 @@
 
     </section>
     <!--===============Banner================-->
-   <!--===========Banner================-->
-   <section class="banner">
-    <div class="banner-text-item hidden" id="siteContent">
-      <div class="banner-heading">
-        <h1>Book your Next tour!</h1>
+  
+    <section class="banner" style="position: relative;">
+      
+      <div class="banner-text-item hidden" id="siteContent">
+        <div class="banner-heading">
+          <h1>Book your Next tour!</h1>
+        </div>
+        <form class="form" id="bookingForm">
+          <input type="text" list="mylist" placeholder="Where would you like to go?" name="destination" required>
+          <input type="date" class="date" name="date" required>
+          <button type="submit" class="book">Book</button>
+        </form>
       </div>
-      <form class="form" id="bookingForm">
-        <input type="text" list="mylist" placeholder="Where would you like to go?" name="destination" required>
-        <input type="date" class="date" name="date" required>
-        <button type="submit" class="book">Book</button>
-      </form>
-    </div>
-  </section>
+    </section>
+    
   
 
 
     <!--=========Services===============-->
     <section class="services">
       <div class="service-item">
-        <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293634/tour-guide_onzla9.png">
+        <img src="https://images.hindustantimes.com/img/2023/01/10/1600x900/While-the-past-year-was-about-revenge-and-revival-_1673351689949.jpg">
         <h2>8000+ Our Local Guides</h2>
       </div>
       <div class="service-item">
@@ -85,7 +89,7 @@
         <div class="card">
           <div class="zoom-img">
             <div class="img-card">
-              <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293736/james-wheeler_xqmq2y.jpg">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP4mFI6KGf1FoaeHvHtcRGt8Q1I0sirRsiacyaeJfJ9rHb_cl-lByP7zABOnkKfkV3-so&usqp=CAU">
             </div>
           </div>
 
@@ -194,7 +198,7 @@
     <!--===========About Us===============-->
     <section class="about">
       <div class="about-img">
-        <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293719/outdoor_tjjhxk.jpg">
+        <img src="banner.png">
       </div>
       <div class="about-text">
         <small>ABOUT OUR COMPANY</small>
