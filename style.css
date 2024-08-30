@@ -312,6 +312,7 @@ ul.menu {
 }
 
 .img-card img {
+    padding-top: 20px;
     -webkit-transition: 0.8s ease;
     transition: 0.8s ease;
 }
